@@ -1,5 +1,6 @@
 package com.anson.expensetracker.controller;
 
+import com.anson.expensetracker.dto.ExpenseFilter;
 import com.anson.expensetracker.model.Expense;
 import com.anson.expensetracker.repository.ExpenseRepository;
 
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
+
 
 
 
@@ -41,6 +44,12 @@ public class ExpenseController {
     public Expense creatExpense(@Valid @RequestBody Expense expense) {
         return expenseRepository.save(expense);
     }
+
+    @PostMapping("/filter")
+    public List<Expense> filterExpenses(@RequestBody ExpenseFilter filter) {
+        return expenseService.filterExpenses(filter);
+    }
+    
 
     @PutMapping("/{id}")
     public Expense updateExpense(@PathVariable Long id, @RequestBody Expense expenseDetails) {

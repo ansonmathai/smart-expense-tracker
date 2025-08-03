@@ -23,6 +23,9 @@ public class Expense {
     @Column(nullable = false)
     private LocalDate date;
 
+    @Column(nullable = true)
+    private String category;
+
     public Expense() {}
 
     public Expense(String title, double amount, LocalDate date) {
