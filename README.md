@@ -7,7 +7,7 @@ A scalable, secure, and intelligent expense tracking system built with Spring Bo
 - Add, update, delete expenses
 - Filter by date, amount, and category
 - Sort by date or amount
-- JWT-based authentication (coming soon)
+- JWT-based authentication
 - Dockerized backend (planned)
 - Monthly summaries and smart alerts (planned)
 
