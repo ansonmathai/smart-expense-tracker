@@ -23,7 +23,7 @@ A scalable, secure, and intelligent expense tracking system built with Spring Bo
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/smart-expense-tracker.git
+git clone https://github.com/ansonmathai/smart-expense-tracker.git
 
 # Navigate to backend
 cd backend/expensetracker
